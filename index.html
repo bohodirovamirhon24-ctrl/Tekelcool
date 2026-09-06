@@ -1,213 +1,157 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SHERLEST & Tez Kel — Аренда строительного оборудования в Ташкенте</title>
-    <meta name="description" content="Аренда и быстрая доставка спецтехники и строительного оборудования в Ташкенте. Рохли, штабелеры, генераторы, виброплиты, лестницы.">
-    <meta name="keywords" content="аренда оборудования Ташкент, аренда спецтехники, Tez Kel, SHERLEST, аренда рохли, аренда генератора, Tashkent">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>194-Maktab / Школа №194 / School №194</title>
     <style>
         :root {
-            --primary: #ff6600;
-            --primary-glow: rgba(255, 102, 0, 0.45);
-            --bg-dark: #0a0a0d;
-            --card-bg: #141418;
-            --text-light: #ffffff;
-            --text-muted: #a0a0ab;
-            --border-color: #24242c;
+            --primary: #0066b3;
+            --secondary: #13334c;
+            --bg: #f4f7f6;
+            --text: #333;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { 
-            background-color: var(--bg-dark); 
-            color: var(--text-light); 
-            line-height: 1.6; 
-            overflow-x: hidden;
-            background-image: radial-gradient(circle at 50% 0%, rgba(255,102,0,0.12) 0%, transparent 60%);
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
         }
-
-        /* Top Bar */
-        .top-bar { background: #050507; border-bottom: 1px solid var(--border-color); padding: 10px 15px; font-size: 0.88rem; }
-        .top-bar-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .top-phones { display: flex; gap: 15px; flex-wrap: wrap; }
-        .top-phones a { color: var(--primary); text-decoration: none; font-weight: 800; padding: 4px 0; }
-
-        /* Navbar */
-        nav { background-color: rgba(10, 10, 13, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(12px); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; flex-wrap: wrap; gap: 12px; }
-
-        .logo { 
-            font-size: 2.2rem; 
-            font-weight: 900; 
-            text-decoration: none; 
-            letter-spacing: 2px;
-            background: linear-gradient(270deg, #ffffff, #ff6600, #ffaa00, #ff0055, #ffffff);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientShift 5s ease infinite, logoGlow 3s ease-in-out infinite alternate;
-            display: inline-block;
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
-
-        .logo span { 
-            background: linear-gradient(270deg, #ff6600, #ffaa00, #ff0055, #ff6600);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientShift 3s ease infinite;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-
-        @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-        @keyframes logoGlow { 0% { filter: drop-shadow(0 0 2px rgba(255,102,0,0.2)); } 100% { filter: drop-shadow(0 0 10px rgba(255,102,0,0.8)); } }
-
-        .nav-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-        .nav-links { display: flex; gap: 8px; list-style: none; flex-wrap: wrap; }
-        .nav-links a { 
-            color: var(--text-light); 
-            text-decoration: none; 
-            font-weight: 600; 
-            padding: 8px 14px; 
-            border-radius: 8px; 
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            display: inline-block;
-            font-size: 0.95rem;
+        .lang-switch select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: none;
+            background: white;
+            color: var(--secondary);
+            font-weight: bold;
+            cursor: pointer;
         }
-        .nav-links a:hover, .nav-links a.active { 
-            color: var(--primary); 
-            background: rgba(255, 102, 0, 0.15); 
-            border-color: var(--primary);
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        /* Language Switcher */
-        .lang-switch { display: flex; background: #1a1a22; border: 1px solid var(--border-color); border-radius: 20px; padding: 2px; }
-        .lang-btn { background: transparent; border: none; color: var(--text-muted); padding: 6px 14px; font-weight: bold; font-size: 0.85rem; cursor: pointer; border-radius: 16px; transition: all 0.3s ease; }
-        .lang-btn.active { background: var(--primary); color: #fff; box-shadow: 0 0 10px var(--primary-glow); }
-
-        /* Hero Section */
-        .hero { max-width: 1200px; margin: 0 auto; padding: 60px 20px; text-align: center; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 20px; text-transform: uppercase; line-height: 1.2; }
-        .hero h1 span { color: var(--primary); text-shadow: 0 0 20px var(--primary-glow); }
-        .hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 35px; }
-        
-        .btn-main { 
-            display: inline-block; 
-            background: var(--primary); 
-            color: #fff; 
-            padding: 16px 36px; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.1rem; 
-            box-shadow: 0 0 25px var(--primary-glow); 
-            transition: all 0.3s ease; 
+        h1 { color: var(--primary); margin-top: 0; }
+        .info-card {
+            background: #eef4f8;
+            border-left: 5px solid var(--primary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
         }
-        .btn-main:hover { transform: translateY(-3px) scale(1.03); }
-
-        /* Features Grid */
-        .features { max-width: 1200px; margin: 20px auto 40px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .feature-card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 25px; border-radius: 16px; text-align: center; transition: all 0.3s ease; }
-        .feature-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 25px var(--primary-glow); }
-        .feature-card h3 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
-        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
-
-        footer { background-color: #050507; border-top: 1px solid var(--border-color); padding: 20px; text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; }
-
-        /* МОБИЛЬНАЯ АДАПТАЦИЯ (Smartphones & Tablets) */
-        @media (max-width: 768px) {
-            .top-bar-container { flex-direction: column; text-align: center; justify-content: center; gap: 6px; }
-            .top-phones { justify-content: center; gap: 12px; }
-            
-            .nav-container { flex-direction: column; text-align: center; padding: 10px 12px; gap: 10px; }
-            .logo { font-size: 1.8rem; }
-            .nav-right { width: 100%; justify-content: space-between; }
-            .nav-links { gap: 4px; }
-            .nav-links a { font-size: 0.85rem; padding: 6px 10px; }
-
-            .hero { padding: 35px 15px; }
-            .hero h1 { font-size: 1.8rem; }
-            .hero p { font-size: 0.98rem; margin-bottom: 25px; }
-            .btn-main { width: 100%; padding: 16px 20px; font-size: 1rem; text-align: center; }
-
-            .features { grid-template-columns: 1fr; gap: 15px; padding: 0 15px; }
-            .feature-card { padding: 20px; }
-        }
-
-        @media (max-width: 380px) {
-            .nav-right { flex-direction: column; gap: 8px; }
-            .logo { font-size: 1.6rem; }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #775;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <span data-ru="<strong>Tez Kel</strong> — Быстрая служба доставки спецтехники" data-uz="<strong>Tez Kel</strong> — Тезкор етказиб бериш хизмати">
-                <strong>Tez Kel</strong> — Быстрая служба доставки спецтехники
-            </span>
-            <div class="top-phones">
-                <a href="tel:+998971224455">+998 (97) 122-44-55</a>
-                <a href="tel:+998881074400">+998 (88) 107-44-00</a>
-            </div>
+    <header>
+        <div class="logo" id="header-title">194-Maktab</div>
+        <div class="lang-switch">
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="uz">O'zbekcha</option>
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 id="main-heading">Toshkent shahridagi 194-sonli umumiy o'rta ta'lim maktabi</h1>
+        <p id="main-desc">Ushbu sahifa Uchtepa tumanidagi 194-maktab haqida ma'lumot berish uchun yaratilgan.</p>
+        
+        <div class="info-card">
+            <h3 id="info-title">📍 Joylashuv va Ma'lumotlar</h3>
+            <p><strong><span id="lbl-address">Manzil</span>:</strong> <span id="val-address">Toshkent shahri, Uchtepa tumani, Chilonzor 25-mavze, 16A-uy</span></p>
+            <p><strong><span id="lbl-hours">Ish vaqti</span>:</strong> <span id="val-hours">Dushanba - Shanba: 08:00 - 17:00</span></p>
+            <p><strong><span id="lbl-district">Tuman</span>:</strong> <span id="val-district">Uchtepa tumani, Nurobod MFY</span></p>
         </div>
     </div>
 
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">SHER<span>LEST</span></a>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active" data-ru="Главная" data-uz="Bosh sahifa">Главная</a></li>
-                    <li><a href="catalog.html" data-ru="Каталог" data-uz="Каталог">Каталог</a></li>
-                    <li><a href="contacts.html" data-ru="Контакты" data-uz="Алоқа">Контакты</a></li>
-                </ul>
-                <div class="lang-switch">
-                    <button class="lang-btn active" id="btn-ru" onclick="switchLang('ru')">RU</button>
-                    <button class="lang-btn" id="btn-uz" onclick="switchLang('uz')">UZ</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <h1 data-ru="Аренда оборудования <span>SHERLEST & Tez Kel</span>" data-uz="Ускуналар ижараси <span>SHERLEST & Tez Kel</span>">
-            Аренда оборудования <span>SHERLEST & Tez Kel</span>
-        </h1>
-        <p data-ru="Надежный инструмент и спецтехника в Ташкенте с быстрой доставкой на ваш объект. Рохли, штабелеры, генераторы, вышки-туры и многое другое."
-           data-uz="Тошкент бўйлаб тезкор етказиб бериш хизмати билан ишончли қурилиш ва омбор ускуналари. Рохля, штабелер, генератор ва нарвонлар.">
-            Надежный инструмент и спецтехника в Ташкенте с быстрой доставкой на ваш объект.
-        </p>
-        <a href="catalog.html" class="btn-main" data-ru="Перейти в Каталог" data-uz="Каталогга ўтиш">Перейти в Каталог</a>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3 data-ru="Быстрая доставка" data-uz="Тезкор етказиб бериш">Быстрая доставка</h3>
-            <p data-ru="Служба Tez Kel оперативно привезет технику прямо на объект." data-uz="Tez Kel хизмати ускуналарни объектингизга зудлик билан етказади.">Служба Tez Kel оперативно привезет технику прямо на объект.</p>
-        </div>
-        <div class="feature-card">
-            <h3 data-ru="Исправная техника" data-uz="Соз ва сифатли техника">Исправная техника</h3>
-            <p data-ru="Весь инструмент проходит регулярный осмотр и обслуживание." data-uz="Барча ускуналар мунтазам равишда техник кўрикдан ўтказилади.">Весь инструмент проходит регулярный осмотр и обслуживание.</p>
-        </div>
-        <div class="feature-card">
-            <h3 data-ru="Выгодные цены" data-uz="Ҳамёнбоп нархлар">Выгодные цены</h3>
-            <p data-ru="Гибкие условия аренды на день, неделю или длительный срок." data-uz="Кунлик ва узоқ муддатли ижара учун қулай шартлар.">Гибкие условия аренды на день, неделю или длительный срок.</p>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2026 SHERLEST & Tez Kel.</p>
+        <p id="footer-text">&copy; 2026 194-maktab. GitHub Pages uchun tayyorlandi.</p>
     </footer>
 
     <script>
-        function switchLang(lang) {
-            document.querySelectorAll('[data-ru]').forEach(el => {
-                el.innerHTML = (lang === 'uz' && el.getAttribute('data-uz')) ? el.getAttribute('data-uz') : el.getAttribute('data-ru');
-            });
-            document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
-            document.getElementById('btn-uz').classList.toggle('active', lang === 'uz');
+        const translations = {
+            uz: {
+                headerTitle: "194-Maktab",
+                mainHeading: "Toshkent shahridagi 194-sonli umumiy o'rta ta'lim maktabi",
+                mainDesc: "Ushbu sahifa Uchtepa tumanidagi 194-maktab haqida rasmiy ma'lumot berish uchun yaratilgan.",
+                infoTitle: "📍 Joylashuv va Ma'lumotlar",
+                lblAddress: "Manzil",
+                valAddress: "Toshkent shahri, Uchtepa tumani, Chilonzor 25-mavze, 16A-uy",
+                lblHours: "Ish vaqti",
+                valHours: "Dushanba - Shanba: 08:00 - 17:00",
+                lblDistrict: "Tuman",
+                valDistrict: "Uchtepa tumani, Nurobod MFY",
+                footerText: "&copy; 2026 194-maktab. GitHub Pages uchun tayyorlandi."
+            },
+            ru: {
+                headerTitle: "Школа №194",
+                mainHeading: "Общеобразовательная средняя школа №194 города Ташкента",
+                mainDesc: "Эта страница создана для предоставления информации о школе №194 в Учтепинском районе.",
+                infoTitle: "📍 Расположение и контакты",
+                lblAddress: "Адрес",
+                valAddress: "г. Ташкент, Учтепинский район, массив Чиланзар-25, 16А",
+                lblHours: "Режим работы",
+                valHours: "Понедельник - Суббота: 08:00 - 17:00",
+                lblDistrict: "Район",
+                valDistrict: "Учтепинский район, махалля Нурабад",
+                footerText: "&copy; 2026 Школа №194. Создано для GitHub Pages."
+            },
+            en: {
+                headerTitle: "School №194",
+                mainHeading: "Secondary General School №194 of Tashkent city",
+                mainDesc: "This page is designed to provide information about School №194 located in Uchtepa district.",
+                infoTitle: "📍 Location & Details",
+                lblAddress: "Address",
+                valAddress: "Tashkent city, Uchtepa district, Chilanzar-25, 16A",
+                lblHours: "Working Hours",
+                valHours: "Monday - Saturday: 08:00 AM - 05:00 PM",
+                lblDistrict: "District",
+                valDistrict: "Uchtepa district, Nurabad mahalla",
+                footerText: "&copy; 2026 School №194. Built for GitHub Pages."
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('languageSelect').value;
+            const t = translations[lang];
+
+            document.getElementById('header-title').innerText = t.headerTitle;
+            document.getElementById('main-heading').innerText = t.mainHeading;
+            document.getElementById('main-desc').innerText = t.mainDesc;
+            document.getElementById('info-title').innerText = t.infoTitle;
+            document.getElementById('lbl-address').innerText = t.lblAddress;
+            document.getElementById('val-address').innerText = t.valAddress;
+            document.getElementById('lbl-hours').innerText = t.lblHours;
+            document.getElementById('val-hours').innerText = t.valHours;
+            document.getElementById('lbl-district').innerText = t.lblDistrict;
+            document.getElementById('val-district').innerText = t.valDistrict;
+            document.getElementById('footer-text').innerHTML = t.footerText;
+            
             document.documentElement.lang = lang;
         }
     </script>
